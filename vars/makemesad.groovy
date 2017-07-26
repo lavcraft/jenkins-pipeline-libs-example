@@ -5,6 +5,7 @@ def call(body) {
     body.delegate = config
     body()
 
+    def b='b'
     def version = "${env.BUILD_NUMBER}"
     def gradleVersion = '-Pversion=' + version
     def server = Artifactory.server 'artifactory'
